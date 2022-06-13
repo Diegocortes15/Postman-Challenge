@@ -43,6 +43,8 @@ newman run SwaggerPetstoreAPI_collection.json -r htmlextra --reporter-htmlextra-
 
 ## Open report
 
+> Take in mind that you have to be in the folder where you have placed the ```` .json ``` file to run the following commands.
+
 1. With the Terminal
 
   In your Terminal
@@ -57,7 +59,12 @@ newman run SwaggerPetstoreAPI_collection.json -r htmlextra --reporter-htmlextra-
   SwaggerPetStore-API-Report.html
   ```
   
+  ![ezgif com-gif-maker (5)](https://user-images.githubusercontent.com/60171460/173420598-a21eee59-c037-47af-a3ff-cf4173696480.gif)
+
+  
 2. With Windows interface
 
   - Open the folder ``` SwaggerPetstoreAPI_Reports ``` that has been created by ``` newman ``` plugin.
   - Open the ``` SwaggerPetStore-API-Report.html ``` file to show the **Swagger Pet Store API** report.
+
+![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/60171460/173417648-2a26e612-8ccd-4079-a2b5-d123f784a57d.gif)
