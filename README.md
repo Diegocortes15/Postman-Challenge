@@ -15,6 +15,10 @@
 
 The easiest way to install Newman is using NPM. If you have Node.js installed, it is most likely that you have NPM installed as well.
 
+> To run the following commands you have to open the ``` Command Promt ```.
+
+![ezgif com-gif-maker (6)](https://user-images.githubusercontent.com/60171460/173421546-2e45537a-be5c-4feb-9222-e1d54bb0aab1.gif)
+
 ##### Intall ``` newman ```
 ``` 
 npm install -g newman 
@@ -35,6 +39,9 @@ npm install -g newman-reporter-htmlextra
 ## Running project
 
 1. In your Terminal, head to the folder where you saved the ``` .json ``` file.
+
+![Capture (1)](https://user-images.githubusercontent.com/60171460/173421711-f6ba21fe-c583-4fdd-ba8d-a307673415a6.png)
+
 2. Once there, run the following command to generate the report.
 
 ```
