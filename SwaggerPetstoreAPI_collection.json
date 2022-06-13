@@ -10,104 +10,207 @@
 			"name": "REST",
 			"item": [
 				{
-					"name": "POST Pet",
-					"event": [
+					"name": "Pets",
+					"item": [
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Verify status code will be 200 Ok\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Verify that the pet created has the submitted ID\", function() {\r",
-									"    pm.expect(pm.response.json().id).to.eql(718421);\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Verify that the pet created has the submitted category name\", function() {\r",
-									"    pm.expect(pm.response.json().category.name).to.eql(\"cat\");\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Verify that the pet created has the submitted name\", function() {\r",
-									"    pm.expect(pm.response.json().name).to.eql(\"simon\");\r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"id\": 718421,\r\n    \"category\": {\r\n        \"id\": 0,\r\n        \"name\": \"cat\"\r\n    },\r\n    \"name\": \"simon\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"name": "POST Pet",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Verify status code will be 200 Ok\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Verify that the pet created has the submitted ID\", function() {\r",
+											"    pm.expect(pm.response.json().id).to.eql(5);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Verify that the pet created has the submitted category name\", function() {\r",
+											"    pm.expect(pm.response.json().category.name).to.eql(\"cat\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Verify that the pet created has the submitted name\", function() {\r",
+											"    pm.expect(pm.response.json().name).to.eql(\"simon\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
 								}
-							}
-						},
-						"url": {
-							"raw": "https://petstore.swagger.io/v2/pet",
-							"protocol": "https",
-							"host": [
-								"petstore",
-								"swagger",
-								"io"
 							],
-							"path": [
-								"v2",
-								"pet"
-							]
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 5,\r\n    \"category\": {\r\n        \"id\": 0,\r\n        \"name\": \"cat\"\r\n    },\r\n    \"name\": \"simon\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://petstore.swagger.io/v2/pet",
+									"protocol": "https",
+									"host": [
+										"petstore",
+										"swagger",
+										"io"
+									],
+									"path": [
+										"v2",
+										"pet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET pet",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Verify status code will be 200 Ok\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Verify that the pet obtained has the same ID specified in the request\", function() {\r",
+											"    pm.expect(pm.response.json().id).to.eql(5);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://petstore.swagger.io/v2/pet/5",
+									"protocol": "https",
+									"host": [
+										"petstore",
+										"swagger",
+										"io"
+									],
+									"path": [
+										"v2",
+										"pet",
+										"5"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "GET pet",
-					"event": [
+					"name": "Orders",
+					"item": [
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Verify status code will be 200 Ok\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Verify that the pet obtained has the same ID specified in the request\", function() {\r",
-									"    pm.expect(pm.response.json().id).to.eql(718421);\r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://petstore.swagger.io/v2/pet/718421",
-							"protocol": "https",
-							"host": [
-								"petstore",
-								"swagger",
-								"io"
+							"name": "POST Order",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Verify status code will be 200 Ok\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Verify that the order created has the submitted ID\", function() {\r",
+											"    pm.expect(pm.response.json().id).to.eql(7);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Verify that the order created has the submitted status\", function() {\r",
+											"    pm.expect(pm.response.json().status).to.eql(\"on hold\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
 							],
-							"path": [
-								"v2",
-								"pet",
-								"718421"
-							]
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 7,\r\n    \"petId\": 5,\r\n    \"quantity\": 0,\r\n    \"status\": \"on hold\",\r\n    \"complete\": true\r\n}"
+								},
+								"url": {
+									"raw": "https://petstore.swagger.io/v2/store/order",
+									"protocol": "https",
+									"host": [
+										"petstore",
+										"swagger",
+										"io"
+									],
+									"path": [
+										"v2",
+										"store",
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Order",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Verify status code will be 200 Ok\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Verify that the order obtained has the same ID specified in the request\", function() {\r",
+											"    pm.expect(pm.response.json().id).to.eql(7);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://petstore.swagger.io/v2/store/order/7",
+									"protocol": "https",
+									"host": [
+										"petstore",
+										"swagger",
+										"io"
+									],
+									"path": [
+										"v2",
+										"store",
+										"order",
+										"7"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				}
 			]
 		}
