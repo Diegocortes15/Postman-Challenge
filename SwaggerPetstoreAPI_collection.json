@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "986ab55d-9e34-4c31-a30f-7185c045cdb0",
+		"name": "SwaggerPetstoreAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19986120"
+	},
+	"item": [
+		{
+			"name": "REST",
+			"item": [
+				{
+					"name": "POST Pet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify status code will be 200 Ok\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify that the pet created has the submitted ID\", function() {\r",
+									"    pm.expect(pm.response.json().id).to.eql(718421);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify that the pet created has the submitted category name\", function() {\r",
+									"    pm.expect(pm.response.json().category.name).to.eql(\"cat\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify that the pet created has the submitted name\", function() {\r",
+									"    pm.expect(pm.response.json().name).to.eql(\"simon\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 718421,\r\n    \"category\": {\r\n        \"id\": 0,\r\n        \"name\": \"cat\"\r\n    },\r\n    \"name\": \"simon\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET pet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify status code will be 200 Ok\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify that the pet obtained has the same ID specified in the request\", function() {\r",
+									"    pm.expect(pm.response.json().id).to.eql(718421);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet/718421",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"718421"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
