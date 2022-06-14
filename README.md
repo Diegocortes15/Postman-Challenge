@@ -40,6 +40,8 @@ npm install -g newman-reporter-htmlextra
 
 ### Clone
 
+> Head to the folder when you would like clone the repository and run the following command
+
 ```
 git clone https://github.com/Diegocortes15/Postman-Challenge.git
 ```
