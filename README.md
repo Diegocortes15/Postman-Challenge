@@ -29,12 +29,20 @@ npm install -g newman
 npm install -g newman-reporter-htmlextra
 ```
 
-## Download Postman Collection
+## Download or Clone Repository
+
+### Download
 
 1. Click on the code button in this repository
 2. Select the Download Zip option
 3. Extract the .zip file with the **Extract here** option
 4. Place the project folder on the desired location
+
+### Clone
+
+```
+git clone https://github.com/Diegocortes15/Postman-Challenge.git
+```
 
 ## Running project
 
