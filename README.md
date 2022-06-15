@@ -60,7 +60,7 @@ newman run SwaggerPetstoreAPI_collection.json -r htmlextra --reporter-htmlextra-
 
 ## Open report
 
-> Take in mind that you have to be in the folder where you have placed the ```` .json ``` file to run the following commands.
+> Take in mind that you have to be in the folder where you have placed the .json file to run the following commands.
 
 1. With the Terminal
 
