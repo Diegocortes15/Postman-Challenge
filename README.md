@@ -73,7 +73,7 @@ newman run SwaggerPetstoreAPI_collection.json -r htmlextra --reporter-htmlextra-
   Then,
 
   ```
-  SwaggerPetStore-API-Report.html
+  start SwaggerPetStore-API-Report.html
   ```
   
   ![ezgif com-gif-maker (5)](https://user-images.githubusercontent.com/60171460/173420598-a21eee59-c037-47af-a3ff-cf4173696480.gif)
