@@ -57,7 +57,7 @@
 										}
 									}
 								},
-								"url": "https://petstore.swagger.io/v2/pet"
+								"url": "{{url}}/pet"
 							},
 							"response": []
 						},
@@ -83,7 +83,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "https://petstore.swagger.io/v2/pet/5"
+								"url": "{{url}}/pet/5"
 							},
 							"response": []
 						}
@@ -128,7 +128,7 @@
 									"mode": "raw",
 									"raw": "{\r\n    \"id\": 7,\r\n    \"petId\": 5,\r\n    \"quantity\": 0,\r\n    \"status\": \"on hold\",\r\n    \"complete\": true\r\n}"
 								},
-								"url": "https://petstore.swagger.io/v2/store/order"
+								"url": "{{url}}/store/order"
 							},
 							"response": []
 						},
@@ -154,13 +154,19 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "https://petstore.swagger.io/v2/store/order/7"
+								"url": "{{url}}/store/order/7"
 							},
 							"response": []
 						}
 					]
 				}
 			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://petstore.swagger.io/v2"
 		}
 	]
 }
